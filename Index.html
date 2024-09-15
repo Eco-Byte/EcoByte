@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoByte</title>
+  <style>
+    /* Updated color palette */
+    :root {
+      --color-primary: #038ead; /* Teal */
+      --color-secondary: #000000; /* Black */
+      --color-accent: #ffffff; /* White */
+      --color-background: #cce7e7; /* Light blue-gray */
+      --color-text: #000000; /* Black */
+    }
+
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--color-background);
+      color: var(--color-text);
+    }
+
+    header {
+      background-color: var(--color-primary);
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: var(--color-accent);
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    nav {
+      background-color: var(--color-secondary);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: var(--color-accent);
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--color-primary);
+    }
+
+    main {
+      padding: 40px 20px;
+    }
+
+    .hero {
+      background-color: var(--color-accent);
+      padding: 80px;
+      text-align: center;
+      border-radius: 80px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero h2 {
+      color: var(--color-primary);
+      margin-top: 0;
+      font-size: 2.2rem;
+      font-weight: 600;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .hero img {
+      max-width: 100%;
+      height: 500px;
+      margin-top: 30px;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .features {
+      margin-top: 60px;
+    }
+
+    .features h2 {
+      text-align: center;
+      color: var(--color-primary);
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+
+    .features-container {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .feature {
+      background-color: var(--color-accent);
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      text-align: center;
+      width: 250px;
+      transition: transform 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature img {
+      max-width: 100%;
+      height: 150px;
+      object-fit: contain;
+      margin-bottom: 20px;
+    }
+
+    .feature h3 {
+      color: var(--color-primary);
+      margin-top: 0;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .feature p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .info-section {
+      margin-top: 60px;
+      display: flex;
+      flex-direction: row-reverse;
+      background-color: var(--color-accent);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .info-section-image {
+      flex: 1;
+      min-height: 300px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .info-section-content {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .info-section h2 {
+      color: var(--color-primary);
+      margin-top: 0;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .info-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .about-section {
+      display: flex;
+      align-items: center;
+      margin-top: 100px;
+      background-color: var(--color-accent);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-section img {
+      max-width: 50%;
+      height: auto;
+      border-radius: 10px 0 0 10px;
+    }
+
+    .about-section .about-content {
+      padding: 40px;
+    }
+
+    .about-section h2 {
+      color: var(--color-primary);
+      margin-top: 0;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: var(--color-primary);
+      color: var(--color-accent);
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    /* From Uiverse.io by ShrinilDhorda */ 
+.btn {
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgb(14, 14, 26);
+  color: rgb(234, 234, 234);
+  font-weight: 700;
+  transition: 0.6s;
+  box-shadow: 0px 0px 60px #1f4c65;
+  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+
+.btn:active {
+  scale: 0.92;
+}
+
+.btn:hover {
+  background: rgb(2,29,78);
+  background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+  color: rgb(4, 4, 38);
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EcoByte</h1>
+  </header>
+
+  <nav>
+<button class="btn" onclick="location.href='#mision'">  Mision </button>
+<button class="btn" onclick="location.href='#somos'">  ¿Quienes somos? </button>
+<button class="btn" onclick="location.href='#vision'">  Vision </button>
+
+  </nav>
+
+  <main>
+    <section class="hero" >
+      <h2>Bienvenido a EcoByte</h2>
+      <img src="EcoByte3.jpeg" alt="EcoByte Hero Image"/>
+    </section>
+
+    <section class="features">
+      <h2>Nuestras Caracteristicas</h2>
+      <div class="features-container">
+        <div class="feature">
+          <img src="EcoByte4.jpg" alt="Sustainability Icon">
+          <h3>Sostenibilidad</h3>
+          <p>Nuestros productos están diseñados pensando en el medio ambiente.</p>
+        </div>
+        <div class="feature">
+          <img src="EcoByte5.jpeg" alt="Innovation Icon">
+          <h3>Inovacion</h3>
+          <p>Nos esforzamos constantemente por traspasar los límites de la tecnología.</p>
+        </div>
+        <div class="feature">
+          <img src="EcoByte6.png" alt="Collaboration Icon">
+          <h3>Colaboracion</h3>
+          <p>Trabajamos estrechamente con nuestros clientes para ofrecer soluciones a medida.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <div class="info-section-image">
+        <img src="EcoByte.jpeg" alt="EcoByte Mission Image" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="info-section-content" id="mision" >
+        <h2>Misión</h2>
+        <p style="text-align: justify;">En EcoByte, nuestra misión es crear soluciones de software innovadoras que no solo impulsen el progreso tecnológico, sino que también promuevan la sostenibilidad. Nos proponemos desarrollar aplicaciones y/o sistemas que optimicen la eficiencia, reduzcan el impacto ecológico y fomenten prácticas responsables tanto en la industria como en la vida cotidiana.</p>
+        <h2 id="vision">Vision</h2>
+        <p style="text-align: justify;">En EcoByte, visualizamos un futuro en el que la tecnología y la sostenibilidad converjan para
+transformar el mundo en un lugar más equilibrado y resiliente. Aspiramos a ser líderes en el
+desarrollo de soluciones de software que impulsen la innovación y la eficiencia.</p>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <img src="EcoByte2.jpg" alt="About EcoByte">
+      <div class="about-content" id="somos">
+        <h2>¿Quienes Somos?</h2>
+        <p style="text-align: justify;">En EcoByte, estamos dedicados a revolucionar el mundo del desarrollo de software con soluciones innovadoras que impulsan la sostenibilidad y la eficiencia. Fundada sobre los principios de tecnología de vanguardia y responsabilidad ambiental, nuestro equipo de desarrolladores y expertos de la industria está comprometido en ofrecer soluciones de software de alta calidad que satisfacen las necesidades únicas de nuestros clientes.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 EcoByte. All rights reserved.</p>
+  </footer>
+</body>
+</html>
